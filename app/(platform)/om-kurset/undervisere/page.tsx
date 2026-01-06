@@ -38,8 +38,9 @@ export default function UnderviserePage() {
                                 <li>Uniteapps (Python)</li>
                             </ul>
                             <p className="mt-4">
-                                <a href="https://www.linkedin.com/in/sundgaard/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                                    Bo på LinkedIn
+                                <a href="https://www.linkedin.com/in/sundgaard/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline inline-flex items-center gap-2">
+                                    <LinkedinLogo className="w-5 h-5" />
+                                    <span>Bo på LinkedIn</span>
                                 </a>
                             </p>
                         </div>
@@ -63,8 +64,9 @@ export default function UnderviserePage() {
                             <p>Digital værktøjskasse nørd. Bruger af generativ AI privat og på job siden december 2022.</p>
                             <p>AI Lead i HK Østjylland og Ambassadør for ”AI for kvinder”.</p>
                             <p className="mt-4">
-                                <a href="https://www.linkedin.com/in/monathorup" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                                    Mona på LinkedIn
+                                <a href="https://www.linkedin.com/in/monathorup" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline inline-flex items-center gap-2">
+                                    <LinkedinLogo className="w-5 h-5" />
+                                    <span>Mona på LinkedIn</span>
                                 </a>
                             </p>
                         </div>
@@ -73,5 +75,22 @@ export default function UnderviserePage() {
 
             </div>
         </div>
+    );
+}
+
+function LinkedinLogo({ className }: { className?: string }) {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            className={className}
+            fill="none"
+        >
+            <rect x="0" y="0" width="24" height="24" rx="4" fill="#0077b5" />
+            <path
+                fill="white"
+                d="M5.5 19h4v-11h-4v11zm2-12.75c1.25 0 2.25-1 2.25-2.25s-1-2.25-2.25-2.25-2.25 1-2.25 2.25 1 2.25 2.25 2.25zm13.5 12.75h-4v-5.5c0-1.5-.5-2.5-2-2.5-1 0-1.75.75-2 1.5-.25.25-.25.75-.25 1.25v5.25h-4s.05-10 0-11h4v1.75c.5-.75 1.5-2 3.5-2 2.5 0 4.5 1.75 4.5 5v6.25z"
+            />
+        </svg>
     );
 }
