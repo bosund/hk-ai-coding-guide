@@ -51,6 +51,16 @@ export function AppSidebar() {
 
   const getIcon = (iconName?: string) => {
     if (!iconName) return null;
+
+    // Handle numeric icons
+    if (["1", "2", "3", "4"].includes(iconName)) {
+      return (
+        <div className="flex h-4 w-4 items-center justify-center rounded-full border border-foreground/50 text-[10px] font-bold shadow-sm">
+          {iconName}
+        </div>
+      );
+    }
+
     const Icon = iconMap[iconName as keyof typeof iconMap];
     return Icon ? <Icon className="h-4 w-4" /> : null;
   };

@@ -29,27 +29,27 @@ export function Navbar() {
                     <div className="hidden md:flex items-center space-x-8">
                         <Link
                             className="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
-                            href="#quick-start"
+                            href="/om-kurset/vibe-coding"
                         >
-                            Start Her
+                            Om Kurset
                         </Link>
                         <Link
                             className="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
-                            href="#processen"
+                            href="/laering/at-prompte"
+                        >
+                            Læring
+                        </Link>
+                        <Link
+                            className="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
+                            href="/processen/undersogelse"
                         >
                             Processen
                         </Link>
                         <Link
                             className="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
-                            href="#"
+                            href="/vaerktojer/links"
                         >
-                            Ressourcer
-                        </Link>
-                        <Link
-                            className="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
-                            href="#"
-                        >
-                            FAQ
+                            Værktøjer
                         </Link>
                     </div>
                     <div className="flex items-center gap-4">

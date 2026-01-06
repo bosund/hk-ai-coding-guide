@@ -12,65 +12,82 @@ export interface NavGroup {
 
 export const navigation: NavGroup[] = [
   {
-    label: "Getting Started",
+    label: "Om Kurset",
     items: [
       {
-        title: "Introduction",
-        href: "/introduction",
-        icon: "rocket",
-      },
-      {
-        title: "Quick Start",
-        href: "/quick-start",
+        title: "Vibe Coding",
+        href: "/om-kurset/vibe-coding",
         icon: "zap",
       },
+      {
+        title: "Undervisere",
+        href: "/om-kurset/undervisere",
+        icon: "rocket",
+      },
     ],
   },
   {
+    label: "Læring",
     items: [
       {
-        title: "AI Concepts",
-        href: "#",
+        title: "At prompte",
+        href: "/laering/at-prompte",
         icon: "brain-circuit",
-        items: [
-          { title: "Large Language Models", href: "/ai-concepts/llm" },
-          { title: "Prompt Engineering", href: "/ai-concepts/prompt-engineering" },
-          { title: "Context Windows", href: "/ai-concepts/context-windows" },
-        ],
       },
       {
-        title: "Tools & Setup",
-        href: "#",
+        title: "God Vibe Coding",
+        href: "/laering/god-vibe-coding",
+        icon: "lightbulb",
+      },
+      {
+        title: "Hyppige fejl",
+        href: "/laering/hyppige-fejl",
         icon: "wrench",
-        items: [
-          { title: "VS Code Extensions", href: "/tools/vscode" },
-          { title: "GitHub Copilot", href: "/tools/copilot" },
-          { title: "ChatGPT Setup", href: "/tools/chatgpt" },
-        ],
       },
       {
-        title: "Best Practices",
-        href: "#",
+        title: "Ordforklaring",
+        href: "/laering/ordforklaring",
         icon: "book-open",
-        items: [
-          { title: "Code Security", href: "/best-practices/security" },
-          { title: "Ethical AI Use", href: "/best-practices/ethics" },
-        ],
       },
     ],
   },
   {
-    label: "Resources",
+    label: "Processen",
     items: [
       {
-        title: "Cheat Sheets",
-        href: "/resources/cheatsheets",
-        icon: "file-text",
+        title: "Undersøgelse",
+        href: "/processen/undersogelse",
+        icon: "1",
       },
       {
-        title: "Video Tutorials",
-        href: "/resources/videos",
-        icon: "video",
+        title: "MVP",
+        href: "/processen/mvp",
+        icon: "2",
+      },
+      {
+        title: "Teknisk Design",
+        href: "/processen/teknisk-design",
+        icon: "3",
+      },
+      {
+        title: "Agents",
+        href: "/processen/agents",
+        icon: "4",
+      },
+    ],
+  },
+  {
+    label: "Værktøjer & Links",
+    items: [
+      {
+        title: "Links",
+        href: "/vaerktojer/links",
+        icon: "link",
+      },
+      {
+        title: "Henosia",
+        href: "/vaerktojer/henosia",
+        icon: "wrench",
       },
     ],
   },
