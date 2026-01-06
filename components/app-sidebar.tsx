@@ -25,6 +25,11 @@ import {
   Lightbulb,
   Link as LinkIcon,
   ChevronRight,
+  Zap,
+  BrainCircuit,
+  Wrench,
+  FileText,
+  Video,
 } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
@@ -34,6 +39,11 @@ const iconMap = {
   rocket: Rocket,
   lightbulb: Lightbulb,
   link: LinkIcon,
+  zap: Zap,
+  "brain-circuit": BrainCircuit,
+  wrench: Wrench,
+  "file-text": FileText,
+  video: Video,
 };
 
 export function AppSidebar() {
@@ -63,63 +73,66 @@ export function AppSidebar() {
         </Link>
       </SidebarHeader>
       <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {navigation.map((item) => {
-                const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
-                
-                if (item.items && item.items.length > 0) {
-                  return (
-                    <Collapsible key={item.href} defaultOpen className="group/collapsible">
-                      <SidebarMenuItem>
-                        <CollapsibleTrigger asChild>
-                          <SidebarMenuButton
-                            className={isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : ""}
-                          >
-                            {getIcon(item.icon)}
-                            <span>{item.title}</span>
-                            <ChevronRight className="ml-auto h-4 w-4 transition-transform group-data-[state=open]/collapsible:rotate-90" />
-                          </SidebarMenuButton>
-                        </CollapsibleTrigger>
-                        <CollapsibleContent>
-                          <SidebarMenuSub>
-                            {item.items.map((subItem) => {
-                              const isSubActive = pathname === subItem.href;
-                              return (
-                                <SidebarMenuSubItem key={subItem.href}>
-                                  <SidebarMenuSubButton
-                                    asChild
-                                    isActive={isSubActive}
-                                  >
-                                    <Link href={subItem.href}>
-                                      <span>{subItem.title}</span>
-                                    </Link>
-                                  </SidebarMenuSubButton>
-                                </SidebarMenuSubItem>
-                              );
-                            })}
-                          </SidebarMenuSub>
-                        </CollapsibleContent>
-                      </SidebarMenuItem>
-                    </Collapsible>
-                  );
-                }
+        {navigation.map((group, index) => (
+          <SidebarGroup key={index}>
+            {group.label && <SidebarGroupLabel>{group.label}</SidebarGroupLabel>}
+            <SidebarGroupContent>
+              <SidebarMenu>
+                {group.items.map((item) => {
+                  const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
 
-                return (
-                  <SidebarMenuItem key={item.href}>
-                    <SidebarMenuButton asChild isActive={isActive}>
-                      <Link href={item.href}>
-                        {getIcon(item.icon)}
-                        <span>{item.title}</span>
-                      </Link>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                );
-              })}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
+                  if (item.items && item.items.length > 0) {
+                    return (
+                      <Collapsible key={item.title} defaultOpen className="group/collapsible">
+                        <SidebarMenuItem>
+                          <CollapsibleTrigger asChild>
+                            <SidebarMenuButton
+                              className={isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : ""}
+                            >
+                              {getIcon(item.icon)}
+                              <span>{item.title}</span>
+                              <ChevronRight className="ml-auto h-4 w-4 transition-transform group-data-[state=open]/collapsible:rotate-90" />
+                            </SidebarMenuButton>
+                          </CollapsibleTrigger>
+                          <CollapsibleContent>
+                            <SidebarMenuSub>
+                              {item.items.map((subItem) => {
+                                const isSubActive = pathname === subItem.href;
+                                return (
+                                  <SidebarMenuSubItem key={subItem.href}>
+                                    <SidebarMenuSubButton
+                                      asChild
+                                      isActive={isSubActive}
+                                    >
+                                      <Link href={subItem.href}>
+                                        <span>{subItem.title}</span>
+                                      </Link>
+                                    </SidebarMenuSubButton>
+                                  </SidebarMenuSubItem>
+                                );
+                              })}
+                            </SidebarMenuSub>
+                          </CollapsibleContent>
+                        </SidebarMenuItem>
+                      </Collapsible>
+                    );
+                  }
+
+                  return (
+                    <SidebarMenuItem key={item.href}>
+                      <SidebarMenuButton asChild isActive={isActive}>
+                        <Link href={item.href}>
+                          {getIcon(item.icon)}
+                          <span>{item.title}</span>
+                        </Link>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  );
+                })}
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </SidebarGroup>
+        ))}
       </SidebarContent>
     </Sidebar>
   );

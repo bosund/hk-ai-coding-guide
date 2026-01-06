@@ -5,85 +5,72 @@ export interface NavItem {
   items?: NavItem[];
 }
 
-export const navigation: NavItem[] = [
+export interface NavGroup {
+  label?: string;
+  items: NavItem[];
+}
+
+export const navigation: NavGroup[] = [
   {
-    title: "Hjem",
-    href: "/",
-    icon: "home",
-  },
-  {
-    title: "Kom i Gang",
-    href: "/kom-i-gang",
-    icon: "book-open",
+    label: "Getting Started",
     items: [
       {
-        title: "Hvad er Vibe-Coding?",
-        href: "/kom-i-gang/vibe-coding",
+        title: "Introduction",
+        href: "/introduction",
+        icon: "rocket",
       },
       {
-        title: "At Prompte",
-        href: "/kom-i-gang/at-prompte",
-      },
-      {
-        title: "Ordforklaring",
-        href: "/kom-i-gang/ordforklaring",
+        title: "Quick Start",
+        href: "/quick-start",
+        icon: "zap",
       },
     ],
   },
   {
-    title: "Processen",
-    href: "/processen",
-    icon: "rocket",
     items: [
       {
-        title: "Fase 1: Undersøgelse",
-        href: "/processen/undersogelse",
+        title: "AI Concepts",
+        href: "#",
+        icon: "brain-circuit",
+        items: [
+          { title: "Large Language Models", href: "/ai-concepts/llm" },
+          { title: "Prompt Engineering", href: "/ai-concepts/prompt-engineering" },
+          { title: "Context Windows", href: "/ai-concepts/context-windows" },
+        ],
       },
       {
-        title: "Fase 2: MVP",
-        href: "/processen/mvp",
+        title: "Tools & Setup",
+        href: "#",
+        icon: "wrench",
+        items: [
+          { title: "VS Code Extensions", href: "/tools/vscode" },
+          { title: "GitHub Copilot", href: "/tools/copilot" },
+          { title: "ChatGPT Setup", href: "/tools/chatgpt" },
+        ],
       },
       {
-        title: "Fase 3: Teknisk Design",
-        href: "/processen/teknisk-design",
-      },
-      {
-        title: "Fase 4: Agents",
-        href: "/processen/agents",
+        title: "Best Practices",
+        href: "#",
+        icon: "book-open",
+        items: [
+          { title: "Code Security", href: "/best-practices/security" },
+          { title: "Ethical AI Use", href: "/best-practices/ethics" },
+        ],
       },
     ],
   },
   {
-    title: "Best Practices",
-    href: "/best-practices",
-    icon: "lightbulb",
+    label: "Resources",
     items: [
       {
-        title: "God Vibecoding",
-        href: "/best-practices/god-vibecoding",
+        title: "Cheat Sheets",
+        href: "/resources/cheatsheets",
+        icon: "file-text",
       },
       {
-        title: "Funktioner i Henosia",
-        href: "/best-practices/henosia",
-      },
-      {
-        title: "Hyppige Fejl",
-        href: "/best-practices/hyppige-fejl",
-      },
-    ],
-  },
-  {
-    title: "Ressourcer",
-    href: "/ressourcer",
-    icon: "link",
-    items: [
-      {
-        title: "Links & Værktøjer",
-        href: "/ressourcer/links",
-      },
-      {
-        title: "Om Bo Sundgaard",
-        href: "/ressourcer/om",
+        title: "Video Tutorials",
+        href: "/resources/videos",
+        icon: "video",
       },
     ],
   },
