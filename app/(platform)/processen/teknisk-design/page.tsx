@@ -1,5 +1,6 @@
 import { ChevronRight } from "lucide-react";
 import { CodeBlock } from "@/components/code-block";
+import { GlossaryTerm } from "@/components/glossary-term";
 
 export default function TekniskDesignPage() {
   const promptContent = `# Tech Design Generator (MVP Edition)
@@ -107,7 +108,7 @@ Spørg til sidst: "Ser dette tekniske design fornuftigt ud, eller skal vi juster
         <h2 className="text-2xl font-bold">Tech Design Generator</h2>
         <p>
           Denne prompt hjælper dig med at tage kritiske teknologivalg, selvom du ikke er teknisk ekspert.
-          Kopier prompten ind i din foretrukne LLM.
+          Kopier prompten ind i din foretrukne <GlossaryTerm term="LLM">LLM</GlossaryTerm>.
         </p>
 
         <CodeBlock code={promptContent} language="markdown" filename="tech-design-generator.md" />

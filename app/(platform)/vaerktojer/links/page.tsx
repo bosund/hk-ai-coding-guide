@@ -1,4 +1,5 @@
 import { ChevronRight, ExternalLink } from "lucide-react";
+import { GlossaryTerm } from "@/components/glossary-term";
 
 export default function LinksPage() {
     return (
@@ -23,11 +24,11 @@ export default function LinksPage() {
                 </section>
 
                 <section>
-                    <h2 className="text-2xl font-bold mb-4">IDE (Udviklingsværktøj)</h2>
+                    <h2 className="text-2xl font-bold mb-4"><GlossaryTerm term="IDE">IDE</GlossaryTerm> (Udviklingsværktøj)</h2>
                     <ul className="space-y-2">
                         <li><a href="https://antigravity.google/" target="_blank" className="flex items-center gap-2">Google Antigravity <ExternalLink className="w-4 h-4" /></a> (her kommer du længst gratis)</li>
                         <li><a href="https://code.visualstudio.com/" target="_blank" className="flex items-center gap-2">VS Code <ExternalLink className="w-4 h-4" /></a> (basis for alle de andre)</li>
-                        <li><a href="https://www.cursor.com" target="_blank" className="flex items-center gap-2">Cursor <ExternalLink className="w-4 h-4" /></a> (God og nem at bruge, koster penge)</li>
+                        <li><a href="https://www.cursor.com" target="_blank" className="flex items-center gap-2"><GlossaryTerm term="Cursor">Cursor</GlossaryTerm> <ExternalLink className="w-4 h-4" /></a> (God og nem at bruge, koster penge)</li>
                     </ul>
                 </section>
 
@@ -40,10 +41,10 @@ export default function LinksPage() {
                 </section>
 
                 <section>
-                    <h2 className="text-2xl font-bold mb-4">Database & Backend</h2>
+                    <h2 className="text-2xl font-bold mb-4"><GlossaryTerm term="Database">Database</GlossaryTerm> & <GlossaryTerm term="Frontend/Backend">Backend</GlossaryTerm></h2>
                     <ul className="space-y-2">
-                        <li><a href="https://www.supabase.com" target="_blank" className="flex items-center gap-2">Supabase <ExternalLink className="w-4 h-4" /></a> (brug også deres MCP server)</li>
-                        <li><a href="https://www.resend.com" target="_blank" className="flex items-center gap-2">Resend <ExternalLink className="w-4 h-4" /></a> (Mails - integreres også med Supabase + MCP server)</li>
+                        <li><a href="https://www.supabase.com" target="_blank" className="flex items-center gap-2">Supabase <ExternalLink className="w-4 h-4" /></a> (brug også deres <GlossaryTerm term="MCP">MCP</GlossaryTerm> server)</li>
+                        <li><a href="https://www.resend.com" target="_blank" className="flex items-center gap-2">Resend <ExternalLink className="w-4 h-4" /></a> (Mails - integreres også med Supabase + <GlossaryTerm term="MCP">MCP</GlossaryTerm> server)</li>
                     </ul>
                 </section>
 
@@ -57,7 +58,7 @@ export default function LinksPage() {
                 <section>
                     <h2 className="text-2xl font-bold mb-4">Dokumentation</h2>
                     <ul className="space-y-2">
-                        <li><a href="https://www.context7.com" target="_blank" className="flex items-center gap-2">Context7 <ExternalLink className="w-4 h-4" /></a> (brug deres MCP server)</li>
+                        <li><a href="https://www.context7.com" target="_blank" className="flex items-center gap-2">Context7 <ExternalLink className="w-4 h-4" /></a> (brug deres <GlossaryTerm term="MCP">MCP</GlossaryTerm> server)</li>
                     </ul>
                 </section>
 
@@ -69,10 +70,10 @@ export default function LinksPage() {
                 </section>
 
                 <section>
-                    <h2 className="text-2xl font-bold mb-4">Publicering (Serverless hosting)</h2>
+                    <h2 className="text-2xl font-bold mb-4">Publicering (<GlossaryTerm term="Serverless">Serverless</GlossaryTerm> <GlossaryTerm term="Deployment">hosting</GlossaryTerm>)</h2>
                     <ul className="space-y-2">
                         <li><a href="https://www.netlify.app" target="_blank" className="flex items-center gap-2">Netlify <ExternalLink className="w-4 h-4" /></a> (Indbygget i Henosia)</li>
-                        <li><a href="https://www.vercel.com" target="_blank" className="flex items-center gap-2">Vercel <ExternalLink className="w-4 h-4" /></a> (Super til at hoste Henosia projekter. Har MCP server)</li>
+                        <li><a href="https://www.vercel.com" target="_blank" className="flex items-center gap-2"><GlossaryTerm term="Vercel">Vercel</GlossaryTerm> <ExternalLink className="w-4 h-4" /></a> (Super til at hoste Henosia projekter. Har <GlossaryTerm term="MCP">MCP</GlossaryTerm> server)</li>
                         <li><a href="https://www.koyeb.com" target="_blank" className="flex items-center gap-2">Koyeb <ExternalLink className="w-4 h-4" /></a> (Europæisk, kan hoste alt)</li>
                     </ul>
                 </section>

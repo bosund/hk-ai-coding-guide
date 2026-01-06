@@ -94,6 +94,11 @@ export const navigation: NavGroup[] = [
         href: "/vaerktojer/hk-arrangementer",
         icon: "calendar",
       },
+      {
+        title: "Git cheatsheet",
+        href: "/vaerktojer/git-cheatsheet",
+        icon: "git-branch",
+      },
     ],
   },
 ];

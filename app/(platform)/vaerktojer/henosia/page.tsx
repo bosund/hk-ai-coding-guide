@@ -1,4 +1,5 @@
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Image as ImageIcon, Edit2, PlusCircle, FolderTree, Settings, FileBox } from "lucide-react";
+import { GlossaryTerm } from "@/components/glossary-term";
 
 export default function HenosiaPage() {
     return (
@@ -12,7 +13,7 @@ export default function HenosiaPage() {
                 <h1 className="text-4xl font-bold tracking-tight text-foreground mb-6">Funktioner i Henosia</h1>
                 <div className="text-lg text-muted-foreground space-y-4 max-w-3xl">
                     <p>
-                        Vi har valgt Henosia til dette kursus fordi det er nemt at gå i gang med, det har styr på meget af contexten fra starten, og har en fin standardstruktur.
+                        Vi har valgt Henosia til dette kursus fordi det er nemt at gå i gang med, det har styr på meget af <GlossaryTerm term="Context">contexten</GlossaryTerm> fra starten, og har en fin standardstruktur.
                     </p>
                     <p>
                         Der er masser af andre produkter du kunne vælge i stedet, men deres free-tier er blandt de bedste.
@@ -40,7 +41,7 @@ export default function HenosiaPage() {
                         <h3 className="text-xl font-semibold">Edit mode</h3>
                     </div>
                     <p className="text-muted-foreground">
-                        Her kan du redigere &quot;props&quot; dvs. egenskaber på elementer, f.eks. skrifttyper, skriftstørrelse m.m. det er ofte hurtigere end at bruge AI.
+                        Her kan du redigere &quot;<GlossaryTerm term="Props">props</GlossaryTerm>&quot; dvs. egenskaber på elementer, f.eks. skrifttyper, skriftstørrelse m.m. det er ofte hurtigere end at bruge AI.
                     </p>
                 </div>
 

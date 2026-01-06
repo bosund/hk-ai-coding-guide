@@ -1,4 +1,5 @@
 import { ChevronRight } from "lucide-react";
+import { GlossaryTerm } from "@/components/glossary-term";
 
 export default function AtPromptePage() {
     return (
@@ -19,7 +20,7 @@ export default function AtPromptePage() {
 
                 <h2 className="text-2xl font-bold mt-8 mb-4">Hvad der skal med i en god prompt</h2>
                 <ul className="list-disc pl-5 space-y-2">
-                    <li><strong>Rolle:</strong> Hvilken rolle skal AI påtage sig f.eks karrierevejleder, ekspert i rejser til Berlin eller content creator på linkedIn – Kontekst er nøglen til præcise svar (Udelades i Henosia)</li>
+                    <li><strong>Rolle:</strong> Hvilken rolle skal AI påtage sig f.eks karrierevejleder, ekspert i rejser til Berlin eller content creator på linkedIn – <GlossaryTerm term="Context">Kontekst</GlossaryTerm> er nøglen til præcise svar (Udelades i Henosia)</li>
                     <li><strong>Opgave:</strong> Hvad vil du gerne have den til?</li>
                     <li><strong>Format:</strong> Skal det f.eks være en brødtekst eller skal der være bullets?</li>
                     <li><strong>Tone:</strong> Skal det f.eks være formelt eller uformelt?</li>
@@ -41,7 +42,7 @@ export default function AtPromptePage() {
                         </h3>
                         <div className="space-y-4 text-sm">
                             <p>"Lav en skabelon til en hjemmeside der overfor virksomheder og samarbejdspartnere viser hvem jeg er og hvad jeg er."</p>
-                            <p>"Siden skal være minimalistisk, med skandinavisk design, lyse farver og klare linjer. Den skal bruge ShadCn elementer når de findes og disse skal styles efter en ensartet og stram designlinje."</p>
+                            <p>"Siden skal være minimalistisk, med skandinavisk design, lyse farver og klare linjer. Den skal bruge <GlossaryTerm term="shadcn/ui">ShadCn</GlossaryTerm> elementer når de findes og disse skal styles efter en ensartet og stram designlinje."</p>
                             <p>"Siden skal være professionel og have plads til at jeg indfører flere sektioner til start vil det være CV, Udvalgte projekter, kontaktoplysninger, Mig privat, kontaktformular"</p>
                             <p>"Siden skal være på Dansk, den skal både virke på desktop og på mobil."</p>
                             <p>"Målet med hjemmesiden er at 'sælge' mig selv overfor virksomheder så de har lyst til at ansætte mig."</p>

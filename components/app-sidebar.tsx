@@ -30,6 +30,8 @@ import {
   FileText,
   Video,
   Calendar,
+  Github,
+  GitBranch,
 } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
@@ -45,6 +47,8 @@ const iconMap = {
   "file-text": FileText,
   video: Video,
   calendar: Calendar,
+  github: Github,
+  "git-branch": GitBranch,
 };
 
 export function AppSidebar() {
