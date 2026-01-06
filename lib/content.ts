@@ -5,85 +5,89 @@ export interface NavItem {
   items?: NavItem[];
 }
 
-export const navigation: NavItem[] = [
+export interface NavGroup {
+  label?: string;
+  items: NavItem[];
+}
+
+export const navigation: NavGroup[] = [
   {
-    title: "Hjem",
-    href: "/",
-    icon: "home",
-  },
-  {
-    title: "Kom i Gang",
-    href: "/kom-i-gang",
-    icon: "book-open",
+    label: "Om Kurset",
     items: [
       {
-        title: "Hvad er Vibe-Coding?",
-        href: "/kom-i-gang/vibe-coding",
+        title: "Vibe Coding",
+        href: "/om-kurset/vibe-coding",
+        icon: "zap",
       },
       {
-        title: "At Prompte",
-        href: "/kom-i-gang/at-prompte",
+        title: "Undervisere",
+        href: "/om-kurset/undervisere",
+        icon: "rocket",
+      },
+    ],
+  },
+  {
+    label: "Læring",
+    items: [
+      {
+        title: "At prompte",
+        href: "/laering/at-prompte",
+        icon: "brain-circuit",
+      },
+      {
+        title: "God Vibe Coding",
+        href: "/laering/god-vibe-coding",
+        icon: "lightbulb",
+      },
+      {
+        title: "Hyppige fejl",
+        href: "/laering/hyppige-fejl",
+        icon: "wrench",
       },
       {
         title: "Ordforklaring",
-        href: "/kom-i-gang/ordforklaring",
+        href: "/laering/ordforklaring",
+        icon: "book-open",
       },
     ],
   },
   {
-    title: "Processen",
-    href: "/processen",
-    icon: "rocket",
+    label: "Processen",
     items: [
       {
-        title: "Fase 1: Undersøgelse",
+        title: "Undersøgelse",
         href: "/processen/undersogelse",
+        icon: "1",
       },
       {
-        title: "Fase 2: MVP",
+        title: "MVP",
         href: "/processen/mvp",
+        icon: "2",
       },
       {
-        title: "Fase 3: Teknisk Design",
+        title: "Teknisk Design",
         href: "/processen/teknisk-design",
+        icon: "3",
       },
       {
-        title: "Fase 4: Agents",
+        title: "Agents",
         href: "/processen/agents",
+        icon: "4",
       },
     ],
   },
   {
-    title: "Best Practices",
-    href: "/best-practices",
-    icon: "lightbulb",
+    label: "Værktøjer & Links",
     items: [
       {
-        title: "God Vibecoding",
-        href: "/best-practices/god-vibecoding",
+        title: "Links",
+        href: "/vaerktojer/links",
+        icon: "link",
       },
       {
-        title: "Funktioner i Henosia",
-        href: "/best-practices/henosia",
-      },
-      {
-        title: "Hyppige Fejl",
-        href: "/best-practices/hyppige-fejl",
-      },
-    ],
-  },
-  {
-    title: "Ressourcer",
-    href: "/ressourcer",
-    icon: "link",
-    items: [
-      {
-        title: "Links & Værktøjer",
-        href: "/ressourcer/links",
-      },
-      {
-        title: "Om Bo Sundgaard",
-        href: "/ressourcer/om",
+        title: "Henosia",
+        href: "/vaerktojer/henosia",
+        icon: "wrench",
       },
     ],
   },

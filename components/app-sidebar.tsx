@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   Sidebar,
@@ -25,6 +24,11 @@ import {
   Lightbulb,
   Link as LinkIcon,
   ChevronRight,
+  Zap,
+  BrainCircuit,
+  Wrench,
+  FileText,
+  Video,
 } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
@@ -34,6 +38,11 @@ const iconMap = {
   rocket: Rocket,
   lightbulb: Lightbulb,
   link: LinkIcon,
+  zap: Zap,
+  "brain-circuit": BrainCircuit,
+  wrench: Wrench,
+  "file-text": FileText,
+  video: Video,
 };
 
 export function AppSidebar() {
@@ -41,6 +50,16 @@ export function AppSidebar() {
 
   const getIcon = (iconName?: string) => {
     if (!iconName) return null;
+
+    // Handle numeric icons
+    if (["1", "2", "3", "4"].includes(iconName)) {
+      return (
+        <div className="flex h-4 w-4 items-center justify-center rounded-full border border-foreground/50 text-[10px] font-bold shadow-sm">
+          {iconName}
+        </div>
+      );
+    }
+
     const Icon = iconMap[iconName as keyof typeof iconMap];
     return Icon ? <Icon className="h-4 w-4" /> : null;
   };
@@ -48,78 +67,78 @@ export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader className="border-b border-sidebar-border p-4">
-        <Link href="/" className="flex items-center gap-3 group">
-          <Image
-            src="/hk-danmark-logo-vector.svg"
-            alt="HK Danmark Logo"
-            width={40}
-            height={40}
-            className="transition-transform group-hover:scale-105"
+        <Link href="/" className="flex items-center gap-3">
+          <img
+            alt="HK Logo"
+            className="h-8 w-auto"
+            src="/hklogo.svg"
           />
-          <div className="flex flex-col">
-            <span className="font-semibold text-sm leading-tight">HK's Guide til</span>
-            <span className="font-bold text-base leading-tight text-primary">AI Coding</span>
-          </div>
+          <span className="font-semibold text-lg tracking-tight text-gray-900 dark:text-white border-l pl-3 border-gray-300 dark:border-gray-700 ml-2">
+            AI Coding Guide
+          </span>
         </Link>
       </SidebarHeader>
       <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {navigation.map((item) => {
-                const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
-                
-                if (item.items && item.items.length > 0) {
-                  return (
-                    <Collapsible key={item.href} defaultOpen className="group/collapsible">
-                      <SidebarMenuItem>
-                        <CollapsibleTrigger asChild>
-                          <SidebarMenuButton
-                            className={isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : ""}
-                          >
-                            {getIcon(item.icon)}
-                            <span>{item.title}</span>
-                            <ChevronRight className="ml-auto h-4 w-4 transition-transform group-data-[state=open]/collapsible:rotate-90" />
-                          </SidebarMenuButton>
-                        </CollapsibleTrigger>
-                        <CollapsibleContent>
-                          <SidebarMenuSub>
-                            {item.items.map((subItem) => {
-                              const isSubActive = pathname === subItem.href;
-                              return (
-                                <SidebarMenuSubItem key={subItem.href}>
-                                  <SidebarMenuSubButton
-                                    asChild
-                                    isActive={isSubActive}
-                                  >
-                                    <Link href={subItem.href}>
-                                      <span>{subItem.title}</span>
-                                    </Link>
-                                  </SidebarMenuSubButton>
-                                </SidebarMenuSubItem>
-                              );
-                            })}
-                          </SidebarMenuSub>
-                        </CollapsibleContent>
-                      </SidebarMenuItem>
-                    </Collapsible>
-                  );
-                }
+        {navigation.map((group, index) => (
+          <SidebarGroup key={index}>
+            {group.label && <SidebarGroupLabel>{group.label}</SidebarGroupLabel>}
+            <SidebarGroupContent>
+              <SidebarMenu>
+                {group.items.map((item) => {
+                  const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
 
-                return (
-                  <SidebarMenuItem key={item.href}>
-                    <SidebarMenuButton asChild isActive={isActive}>
-                      <Link href={item.href}>
-                        {getIcon(item.icon)}
-                        <span>{item.title}</span>
-                      </Link>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                );
-              })}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
+                  if (item.items && item.items.length > 0) {
+                    return (
+                      <Collapsible key={item.title} defaultOpen className="group/collapsible">
+                        <SidebarMenuItem>
+                          <CollapsibleTrigger asChild>
+                            <SidebarMenuButton
+                              className={isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : ""}
+                            >
+                              {getIcon(item.icon)}
+                              <span>{item.title}</span>
+                              <ChevronRight className="ml-auto h-4 w-4 transition-transform group-data-[state=open]/collapsible:rotate-90" />
+                            </SidebarMenuButton>
+                          </CollapsibleTrigger>
+                          <CollapsibleContent>
+                            <SidebarMenuSub>
+                              {item.items.map((subItem) => {
+                                const isSubActive = pathname === subItem.href;
+                                return (
+                                  <SidebarMenuSubItem key={subItem.href}>
+                                    <SidebarMenuSubButton
+                                      asChild
+                                      isActive={isSubActive}
+                                    >
+                                      <Link href={subItem.href}>
+                                        <span>{subItem.title}</span>
+                                      </Link>
+                                    </SidebarMenuSubButton>
+                                  </SidebarMenuSubItem>
+                                );
+                              })}
+                            </SidebarMenuSub>
+                          </CollapsibleContent>
+                        </SidebarMenuItem>
+                      </Collapsible>
+                    );
+                  }
+
+                  return (
+                    <SidebarMenuItem key={item.href}>
+                      <SidebarMenuButton asChild isActive={isActive}>
+                        <Link href={item.href}>
+                          {getIcon(item.icon)}
+                          <span>{item.title}</span>
+                        </Link>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  );
+                })}
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </SidebarGroup>
+        ))}
       </SidebarContent>
     </Sidebar>
   );

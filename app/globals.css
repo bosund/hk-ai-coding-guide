@@ -6,6 +6,10 @@
   .text-balance {
     text-wrap: balance;
   }
+  .hero-pattern {
+    background-image: radial-gradient(rgba(0, 157, 224, 0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
 }
 
 @layer base {
