@@ -1,29 +1,46 @@
 import { ChevronRight, Github, Globe, Server, Link as LinkIcon, ShoppingCart, Dna } from "lucide-react";
+import { GlossaryTerm } from "@/components/glossary-term";
 
 export default function GoLivePage() {
     const steps = [
         {
             number: 1,
             title: "Forbind til Github",
-            description: "Opret en bruger på GitHub.com hvis du ikke allerede har en. GitHub fungerer som et online lager for din kode, hvor du kan gemme versioner af dit arbejde.",
+            description: (
+                <>
+                    Opret en bruger på <GlossaryTerm term="GitHub">GitHub.com</GlossaryTerm> hvis du ikke allerede har en. GitHub fungerer som et online lager for din kode, hvor du kan gemme versioner af dit arbejde.
+                </>
+            ),
             icon: <Github className="w-6 h-6" />,
         },
         {
             number: 2,
             title: "Publicer projektet i Github",
-            description: "Brug Git til at 'pushe' (sende) din kode fra din computer op til dit nye repository på GitHub. Dette gør koden tilgængelig for hosting-tjenester.",
+            description: (
+                <>
+                    Brug <GlossaryTerm term="Git">Git</GlossaryTerm> til at 'pushe' (sende) din kode fra din computer op til dit nye <GlossaryTerm term="Repository">repository</GlossaryTerm> på GitHub. Dette gør koden tilgængelig for hosting-tjenester.
+                </>
+            ),
             icon: <Globe className="w-6 h-6" />,
         },
         {
             number: 3,
             title: "Opret konto på Vercel eller Koyeb",
-            description: "Vælg en hosting-udbyder. Vercel er rigtig god til Next.js projekter (som dette), mens Koyeb er god til 'Docker' baserede projekter. Opret en gratis 'Hobby' konto.",
+            description: (
+                <>
+                    Vælg en <GlossaryTerm term="Hosting">hosting</GlossaryTerm>-udbyder. <GlossaryTerm term="Vercel">Vercel</GlossaryTerm> er rigtig god til Next.js projekter (som dette), mens Koyeb er god til 'Docker' baserede projekter. Opret en gratis 'Hobby' konto.
+                </>
+            ),
             icon: <Server className="w-6 h-6" />,
         },
         {
             number: 4,
             title: "Forbind til dit Github projekt",
-            description: "Log ind på din hosting-konto (fx Vercel) og vælg 'Add New Project'. Forbind den til din GitHub-konto og vælg det repository, du lige har uploadet. Tryk på 'Deploy'.",
+            description: (
+                <>
+                    Log ind på din hosting-konto (fx <GlossaryTerm term="Vercel">Vercel</GlossaryTerm>) og vælg 'Add New Project'. Forbind den til din <GlossaryTerm term="GitHub">GitHub</GlossaryTerm>-konto og vælg det <GlossaryTerm term="Repository">repository</GlossaryTerm>, du lige har uploadet. Tryk på 'Deploy'.
+                </>
+            ),
             icon: <LinkIcon className="w-6 h-6" />,
         },
         {
@@ -31,11 +48,11 @@ export default function GoLivePage() {
             title: "Køb domæne",
             description: (
                 <>
-                    For at få en rigtig adresse (fx mit-projekt.dk) skal du købe et domæne.{" "}
+                    For at få en rigtig adresse (fx mit-projekt.dk) skal du købe et <GlossaryTerm term="Domæne">domæne</GlossaryTerm>.{" "}
                     <a href="https://dandomain.dk" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">Dandomain.dk</a> og{" "}
                     <a href="https://simply.com" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">Simply.com</a> er populære danske udbydere hvor du nemt kan købe et domæne. Begge er relativt billige og har overenskomst med HK.
                     <br /><br />
-                    Til et projekt som dette kan de desværre ikke tilbyde hosting, så du skal kun købe domænet samt DNS tjeneste igennem dem.
+                    Til et projekt som dette kan de desværre ikke tilbyde hosting, så du skal kun købe domænet samt <GlossaryTerm term="DNS">DNS</GlossaryTerm> tjeneste igennem dem.
                 </>
             ),
             icon: <ShoppingCart className="w-6 h-6" />,
@@ -43,7 +60,11 @@ export default function GoLivePage() {
         {
             number: 6,
             title: "Forbind DNS (CNAME-Record)",
-            description: "Det sidste tekniske trin. Log ind hos din domæne-udbyder og find DNS-indstillingerne. Opret en 'CNAME' record der peger på den adresse, du har fået af Vercel eller Koyeb.",
+            description: (
+                <>
+                    Det sidste tekniske trin. Log ind hos din domæne-udbyder og find <GlossaryTerm term="DNS">DNS</GlossaryTerm>-indstillingerne. Opret en '<GlossaryTerm term="CNAME">CNAME</GlossaryTerm>' record der peger på den adresse, du har fået af Vercel eller Koyeb.
+                </>
+            ),
             icon: <Dna className="w-6 h-6" />,
         },
     ];
@@ -82,9 +103,9 @@ export default function GoLivePage() {
                                     </span>
                                     <h3 className="text-xl font-semibold tracking-tight">{step.title}</h3>
                                 </div>
-                                <p className="text-muted-foreground leading-relaxed">
+                                <div className="text-muted-foreground leading-relaxed">
                                     {step.description}
-                                </p>
+                                </div>
                             </div>
                         </div>
                     ))}
@@ -95,7 +116,7 @@ export default function GoLivePage() {
                         💡 Pro Tip
                     </h3>
                     <p className="text-sm text-muted-foreground">
-                        Når du først har sat dette op én gang, vil din hjemmeside automatisk opdatere sig selv, hver gang du 'pusher' ændringer til GitHub. Det kaldes CI/CD (Continuous Integration / Continuous Deployment).
+                        Når du først har sat dette op én gang, vil din hjemmeside automatisk opdatere sig selv, hver gang du 'pusher' ændringer til GitHub. Det kaldes <GlossaryTerm term="CI/CD">CI/CD</GlossaryTerm> (Continuous Integration / Continuous Deployment).
                     </p>
                 </div>
             </div>

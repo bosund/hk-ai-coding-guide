@@ -83,6 +83,21 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
         definition: 'En tjeneste til at "hoste" din hjemmeside, så den kommer ud på internettet.',
         category: "Værktøjer & Miljø"
     },
+    {
+        term: "GitHub",
+        definition: "En platform til at gemme og dele din kode online. Bruges sammen med Git til versionsstyring og backup i skyen.",
+        category: "Værktøjer & Miljø"
+    },
+    {
+        term: "Repository",
+        definition: "En 'mappe' i skyen (fx på GitHub), der indeholder alle filerne til dit projekt og gemmer hele dets historik.",
+        category: "Værktøjer & Miljø"
+    },
+    {
+        term: "Hosting",
+        definition: "En tjeneste (fx Vercel eller Koyeb), der stiller en server til rådighed, så din hjemmeside er tændt og kan besøges af alle på internettet.",
+        category: "Værktøjer & Miljø"
+    },
 
     // Webudvikling & Stack
     {
@@ -165,6 +180,26 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     {
         term: "Serverless",
         definition: 'En teknologi hvor du ikke skal tænke på servere. Koden "vågner" kun, når der er brug for den, hvilket sparer strøm og penge.',
+        category: "Data & Drift"
+    },
+    {
+        term: "DNS",
+        definition: "Domain Name System. En 'telefonbog' for internettet, der oversætter menneskelige adresser (som google.dk) til serveres IP-adresser.",
+        category: "Data & Drift"
+    },
+    {
+        term: "CI/CD",
+        definition: "Continuous Integration / Continuous Deployment. En automatiseret proces, der tester og udgiver din kode hver gang du laver ændringer.",
+        category: "Data & Drift"
+    },
+    {
+        term: "Domæne",
+        definition: "Din unikke adresse på internettet (fx google.dk). Det er det navn, folk skriver i browseren for at finde din side.",
+        category: "Data & Drift"
+    },
+    {
+        term: "CNAME",
+        definition: "En DNS-indstilling (record), der fortæller internettet, at dit domæne skal pege videre til en anden adresse (fx din Vercel-adresse).",
         category: "Data & Drift"
     }
 ];
