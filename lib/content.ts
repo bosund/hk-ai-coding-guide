@@ -49,6 +49,11 @@ export const navigation: NavGroup[] = [
         href: "/laering/ordforklaring",
         icon: "book-open",
       },
+      {
+        title: "Go Live",
+        href: "/laering/go-live",
+        icon: "rocket",
+      },
     ],
   },
   {
