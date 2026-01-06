@@ -35,6 +35,51 @@ export default function VibeCodingPage() {
                     Gennem tæt samarbejde med både brugere og IT-specialister hjælper du med at skabe en kultur, hvor AI anvendes sikkert, effektivt og værdiskabende i organisationen.
                 </p>
 
+
+                <h2 className="text-3xl font-bold mt-12 mb-6">Hvad man ellers kan vibe code</h2>
+                <p className="text-lg text-muted-foreground mb-6">
+                    Udover webudvikling kan du bruge AI til at hjælpe med mange andre typer opgaver. Her er nogle eksempler.
+                </p>
+
+                <div className="space-y-8">
+                    <div>
+                        <h3 className="text-xl font-semibold mb-2">Excel-makroer (VBA)</h3>
+                        <p className="mb-2">AI kan skrive komplekse VBA-scripts til at automatisere dine regneark.</p>
+                        <div className="bg-muted p-4 rounded-lg text-sm">
+                            <strong>Hvordan:</strong> Beskriv hvad du vil opnå (f.eks. &quot;Saml data fra alle ark og lav en pivot-tabel&quot;).
+                            Bed AI&apos;en generere VBA-koden, og kopier den ind i Excel under Developer &gt; Visual Basic.
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 className="text-xl font-semibold mb-2">Python scripts</h3>
+                        <p className="mb-2">Perfekt til dataanalyse, filhåndtering og automatisering af kedelige opgaver.</p>
+                        <div className="bg-muted p-4 rounded-lg text-sm">
+                            <strong>Hvordan:</strong> Installer Python og en editor som VS Code.
+                            Beskriv din opgave (f.eks. &quot;Læs alle PDF-filer i en mappe og træk fakturanumre ud&quot;).
+                            Kør scriptet og se magien ske.
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 className="text-xl font-semibold mb-2">Desktop applikationer</h3>
+                        <p className="mb-2">Du kan bygge rigtige programmer til Windows eller Mac.</p>
+                        <div className="bg-muted p-4 rounded-lg text-sm">
+                            <strong>Hvordan:</strong> Brug frameworks som Electron eller Tauri.
+                            Bed AI&apos;en om at sætte &quot;boilereplaten&quot; op, og byg derefter funktionerne en efter en, præcis som med en hjemmeside.
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 className="text-xl font-semibold mb-2">BI-apps (Business Intelligence)</h3>
+                        <p className="mb-2">Få hjælp til at visualisere data i værktøjer som Power BI eller Tableau.</p>
+                        <div className="bg-muted p-4 rounded-lg text-sm">
+                            <strong>Hvordan:</strong> Bed AI&apos;en om hjælp til DAX-formler (til Power BI) eller til at strukturere din datamodel,
+                            så dine dashboards bliver hurtige og viser de rigtige indsigter.
+                        </div>
+                    </div>
+                </div>
+
                 <h2 className="text-3xl font-bold mt-12 mb-6">Sådan bliver du klogere</h2>
                 <p>Søg på nettet med google og læs om Vibe-coding, se Youtube videoer.</p>
                 <ul>
