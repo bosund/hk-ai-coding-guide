@@ -7,9 +7,14 @@ export interface GlossaryTerm {
 export const GLOSSARY_TERMS: GlossaryTerm[] = [
     // AI & Vibe Coding Begreber
     {
-        term: "Vibe Coding",
-        definition: 'At programmere ved at beskrive "stemningen" eller resultatet til en AI, uden nødvendigvis at røre koden selv.',
-        category: "AI & Vibe Coding"
+        term: "Stitch",
+        definition: "Et værktøj fra Google der hjælper med at designe flotte og moderne hjemmesider (layouts) som ser professionelle ud.",
+        category: "Værktøjer & Miljø"
+    },
+    {
+        term: "Assets",
+        definition: "Filer der ikke er kode (f.eks. billeder, logoer, skrifttyper, videoer) som bruges på din hjemmeside.",
+        category: "Værktøjer & Miljø"
     },
     {
         term: "MVP",

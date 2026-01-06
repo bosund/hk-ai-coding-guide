@@ -1,4 +1,5 @@
 import { ChevronRight, Github, Globe, Server, Link as LinkIcon, ShoppingCart, Dna } from "lucide-react";
+import Link from "next/link";
 import { GlossaryTerm } from "@/components/glossary-term";
 
 export default function GoLivePage() {
@@ -19,6 +20,8 @@ export default function GoLivePage() {
             description: (
                 <>
                     Brug <GlossaryTerm term="Git">Git</GlossaryTerm> til at 'pushe' (sende) din kode fra din computer op til dit nye <GlossaryTerm term="Repository">repository</GlossaryTerm> på GitHub. Dette gør koden tilgængelig for hosting-tjenester.
+                    <br /><br />
+                    Har du brug for hjælp til kommandoerne? <Link href="/vaerktojer/git-cheatsheet" className="text-primary underline hover:text-primary/80">Se vores Git Cheatsheet her</Link>.
                 </>
             ),
             icon: <Globe className="w-6 h-6" />,
