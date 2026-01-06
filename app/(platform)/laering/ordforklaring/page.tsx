@@ -31,6 +31,10 @@ export default function OrdforklaringPage() {
                                 <td className="px-6 py-4 text-muted-foreground">At programmere ved at beskrive "stemningen" eller resultatet til en AI, uden nødvendigvis at røre koden selv.</td>
                             </tr>
                             <tr>
+                                <td className="px-6 py-4 whitespace-nowrap font-medium text-foreground">MVP</td>
+                                <td className="px-6 py-4 text-muted-foreground">Minimum Viable Product. Den mindste/simpleste udgave af dit produkt, der kan løse problemet.</td>
+                            </tr>
+                            <tr>
                                 <td className="px-6 py-4 whitespace-nowrap font-medium text-foreground">LLM</td>
                                 <td className="px-6 py-4 text-muted-foreground">"Hjernen" bag AI'en (f.eks. GPT-4, Claude 3.5). Den model, der forstår din tekst og skriver kode retur.</td>
                             </tr>
@@ -110,12 +114,24 @@ export default function OrdforklaringPage() {
                                 <td className="px-6 py-4 text-muted-foreground">Et skelet af kode, du bygger videre på (f.eks. Next.js).</td>
                             </tr>
                             <tr>
+                                <td className="px-6 py-4 whitespace-nowrap font-medium text-foreground">Tech Stack</td>
+                                <td className="px-6 py-4 text-muted-foreground">En samling af teknologier (sprog, frameworks, databaser), der arbejder sammen for at drive din app.</td>
+                            </tr>
+                            <tr>
                                 <td className="px-6 py-4 whitespace-nowrap font-medium text-foreground">React</td>
                                 <td className="px-6 py-4 text-muted-foreground">Bibliotek til at bygge brugergrænseflader med "komponenter".</td>
                             </tr>
                             <tr>
+                                <td className="px-6 py-4 whitespace-nowrap font-medium text-foreground">Props</td>
+                                <td className="px-6 py-4 text-muted-foreground">Forkortelse for "properties". Data eller indstillinger, du sender ind i en komponent for at ændre dens udseende eller indhold.</td>
+                            </tr>
+                            <tr>
                                 <td className="px-6 py-4 whitespace-nowrap font-medium text-foreground">Frontend/Backend</td>
                                 <td className="px-6 py-4 text-muted-foreground">Frontend er det brugeren ser. Backend er motoren bagved (logik, data).</td>
+                            </tr>
+                            <tr>
+                                <td className="px-6 py-4 whitespace-nowrap font-medium text-foreground">Server Actions</td>
+                                <td className="px-6 py-4 text-muted-foreground">Funktioner i Next.js, der kører på serveren men kaldes direkte fra din frontend. Giver nem adgang til data.</td>
                             </tr>
                             <tr>
                                 <td className="px-6 py-4 whitespace-nowrap font-medium text-foreground">Tailwind CSS</td>
@@ -142,12 +158,28 @@ export default function OrdforklaringPage() {
                                 <td className="px-6 py-4 text-muted-foreground">En "tjener" der lader to programmer tale sammen.</td>
                             </tr>
                             <tr>
+                                <td className="px-6 py-4 whitespace-nowrap font-medium text-foreground">Environment Variables</td>
+                                <td className="px-6 py-4 text-muted-foreground">Hemmelige nøgler (f.eks. API-keys), som gemmes i en <code>.env</code>-fil, så de ikke ligger åbent i din kode.</td>
+                            </tr>
+                            <tr>
                                 <td className="px-6 py-4 whitespace-nowrap font-medium text-foreground">Database</td>
                                 <td className="px-6 py-4 text-muted-foreground">Et digitalt arkivskab til permanente data.</td>
                             </tr>
                             <tr>
+                                <td className="px-6 py-4 whitespace-nowrap font-medium text-foreground">Schema</td>
+                                <td className="px-6 py-4 text-muted-foreground">En "plantegning" over din database. Beskriver hvilke tabeller du har, og hvilke data (kolonner) der skal være i dem.</td>
+                            </tr>
+                            <tr>
+                                <td className="px-6 py-4 whitespace-nowrap font-medium text-foreground">Auth</td>
+                                <td className="px-6 py-4 text-muted-foreground">Authentication. Systemet der tjekker, hvem brugeren er (login), og hvad de må (adgangskontrol).</td>
+                            </tr>
+                            <tr>
                                 <td className="px-6 py-4 whitespace-nowrap font-medium text-foreground">Deployment</td>
                                 <td className="px-6 py-4 text-muted-foreground">At flytte koden fra computer til server (live).</td>
+                            </tr>
+                            <tr>
+                                <td className="px-6 py-4 whitespace-nowrap font-medium text-foreground">Serverless</td>
+                                <td className="px-6 py-4 text-muted-foreground">En teknologi hvor du ikke skal tænke på servere. Koden "vågner" kun, når der er brug for den, hvilket sparer strøm og penge.</td>
                             </tr>
                         </tbody>
                     </table>

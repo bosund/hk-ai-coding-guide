@@ -1,4 +1,4 @@
-import { ChevronRight, Image as ImageIcon, Edit2, PlusCircle, FolderTree, Settings, FileBox } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 export default function HenosiaPage() {
     return (
@@ -25,9 +25,7 @@ export default function HenosiaPage() {
                 {/* Upload billede */}
                 <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
                     <div className="flex items-center gap-4 mb-4">
-                        <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
-                            <ImageIcon className="w-6 h-6" />
-                        </div>
+
                         <h3 className="text-xl font-semibold">Upload billede</h3>
                     </div>
                     <p className="text-muted-foreground">
@@ -38,9 +36,7 @@ export default function HenosiaPage() {
                 {/* Edit mode */}
                 <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
                     <div className="flex items-center gap-4 mb-4">
-                        <div className="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
-                            <Edit2 className="w-6 h-6" />
-                        </div>
+
                         <h3 className="text-xl font-semibold">Edit mode</h3>
                     </div>
                     <p className="text-muted-foreground">
@@ -51,9 +47,7 @@ export default function HenosiaPage() {
                 {/* Insert */}
                 <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
                     <div className="flex items-center gap-4 mb-4">
-                        <div className="w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400">
-                            <PlusCircle className="w-6 h-6" />
-                        </div>
+
                         <h3 className="text-xl font-semibold">Insert</h3>
                     </div>
                     <p className="text-muted-foreground">
@@ -64,9 +58,7 @@ export default function HenosiaPage() {
                 {/* Selection tree */}
                 <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
                     <div className="flex items-center gap-4 mb-4">
-                        <div className="w-10 h-10 rounded-lg bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-600 dark:text-orange-400">
-                            <FolderTree className="w-6 h-6" />
-                        </div>
+
                         <h3 className="text-xl font-semibold">Selection tree</h3>
                     </div>
                     <p className="text-muted-foreground">
@@ -77,9 +69,7 @@ export default function HenosiaPage() {
                 {/* Custom instructions */}
                 <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
                     <div className="flex items-center gap-4 mb-4">
-                        <div className="w-10 h-10 rounded-lg bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center text-pink-600 dark:text-pink-400">
-                            <Settings className="w-6 h-6" />
-                        </div>
+
                         <h3 className="text-xl font-semibold">Custom instructions</h3>
                     </div>
                     <p className="text-muted-foreground">
@@ -90,9 +80,7 @@ export default function HenosiaPage() {
                 {/* Assets */}
                 <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
                     <div className="flex items-center gap-4 mb-4">
-                        <div className="w-10 h-10 rounded-lg bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-600 dark:text-yellow-400">
-                            <FileBox className="w-6 h-6" />
-                        </div>
+
                         <h3 className="text-xl font-semibold">Assets</h3>
                     </div>
                     <p className="text-muted-foreground">

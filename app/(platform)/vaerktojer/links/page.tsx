@@ -69,7 +69,7 @@ export default function LinksPage() {
                 </section>
 
                 <section>
-                    <h2 className="text-2xl font-bold mb-4">Publicering (Hosting)</h2>
+                    <h2 className="text-2xl font-bold mb-4">Publicering (Serverless hosting)</h2>
                     <ul className="space-y-2">
                         <li><a href="https://www.netlify.app" target="_blank" className="flex items-center gap-2">Netlify <ExternalLink className="w-4 h-4" /></a> (Indbygget i Henosia)</li>
                         <li><a href="https://www.vercel.com" target="_blank" className="flex items-center gap-2">Vercel <ExternalLink className="w-4 h-4" /></a> (Super til at hoste Henosia projekter. Har MCP server)</li>

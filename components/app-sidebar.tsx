@@ -29,6 +29,7 @@ import {
   Wrench,
   FileText,
   Video,
+  Calendar,
 } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
@@ -43,6 +44,7 @@ const iconMap = {
   wrench: Wrench,
   "file-text": FileText,
   video: Video,
+  calendar: Calendar,
 };
 
 export function AppSidebar() {

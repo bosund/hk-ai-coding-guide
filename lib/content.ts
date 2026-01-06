@@ -89,6 +89,11 @@ export const navigation: NavGroup[] = [
         href: "/vaerktojer/henosia",
         icon: "wrench",
       },
+      {
+        title: "HK-Arrangementer",
+        href: "/vaerktojer/hk-arrangementer",
+        icon: "calendar",
+      },
     ],
   },
 ];
