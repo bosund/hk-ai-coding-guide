@@ -1,30 +1,8 @@
 import { ChevronRight } from "lucide-react";
+import { CodeBlock } from "@/components/code-block";
 
 export default function MVPPage() {
-  return (
-    <div className="max-w-4xl mx-auto space-y-8 p-4 pt-0">
-      <header className="pb-8 border-b border-border">
-        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
-          <span>Processen</span>
-          <ChevronRight className="w-3 h-3" />
-          <span className="text-primary font-medium">2 - MVP</span>
-        </div>
-        <h1 className="text-4xl font-bold tracking-tight text-foreground mb-6">Fase 2: Produktkravspecifikation (PRD)</h1>
-        <p className="text-lg text-muted-foreground">
-          Definer HVAD du bygger, HVEM det er til, og HVORFOR det er vigtigt. En MVP (Minimum Viable Product) handler om at skære ind til benet.
-        </p>
-      </header>
-
-      <div className="prose prose-lg dark:prose-invert max-w-none">
-
-        <h2 className="text-2xl font-bold">PRD Generator (Interview Mode)</h2>
-        <p>
-          Brug denne prompt til at lade AI'en interviewe dig og generere en professionel kravspecifikation.
-        </p>
-
-        <div className="relative">
-          <pre className="p-4 rounded-lg bg-muted overflow-x-auto text-sm">
-            {`# Del II - Produktkravspecifikation (PRD) Generator (Interview Mode)
+  const promptContent = `# Del II - Produktkravspecifikation (PRD) Generator (Interview Mode)
 
 Jeg hjælper dig med at oprette en Produktkravspecifikation (PRD) til din MVP. Dette dokument vil definere HVAD du bygger, HVEM det er til, og HVORFOR det er vigtigt.
 
@@ -72,9 +50,30 @@ Da du er en **Vibe-coder** (gode idéer, bruger AI til at bygge), tager vi det t
 *[Vent på svar]*
 
 **Q10:** "Sidste spørgsmål: Har du nogen faste begrænsninger? (F.eks. 'Skal være færdig om 2 uger', 'Må ikke koste penge i drift')."
-*[Vent på svar]*`}
-          </pre>
+*[Vent på svar]*`;
+
+  return (
+    <div className="max-w-4xl mx-auto space-y-8 p-4 pt-0">
+      <header className="pb-8 border-b border-border">
+        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
+          <span>Processen</span>
+          <ChevronRight className="w-3 h-3" />
+          <span className="text-primary font-medium">2 - MVP</span>
         </div>
+        <h1 className="text-4xl font-bold tracking-tight text-foreground mb-6">Fase 2: Produktkravspecifikation (PRD)</h1>
+        <p className="text-lg text-muted-foreground">
+          Definer HVAD du bygger, HVEM det er til, og HVORFOR det er vigtigt. En MVP (Minimum Viable Product) handler om at skære ind til benet.
+        </p>
+      </header>
+
+      <div className="prose prose-lg dark:prose-invert max-w-none">
+
+        <h2 className="text-2xl font-bold">PRD Generator (Interview Mode)</h2>
+        <p>
+          Brug denne prompt til at lade AI'en interviewe dig og generere en professionel kravspecifikation.
+        </p>
+
+        <CodeBlock code={promptContent} language="markdown" filename="prd-generator.md" />
 
       </div>
     </div>

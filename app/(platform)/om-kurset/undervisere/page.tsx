@@ -30,6 +30,7 @@ export default function UnderviserePage() {
                         <h3 className="text-primary font-medium">Faglig konsulent i HK/Privat</h3>
                         <div className="prose dark:prose-invert mt-4 text-muted-foreground">
                             <p>Hjælper medlemmer med at få bedre vilkår igennem kollektive aftaler og overenskomster.</p>
+                            <p>Udvikler hjælpeværktøjer, renteberegnere og kravsberegnere med AI.</p>
                             <p className="font-semibold text-foreground mt-4 mb-2">Projekter:</p>
                             <ul className="list-disc pl-4 space-y-1">
                                 <li><a href="https://www.uniteapps.dk" target="_blank" rel="noopener noreferrer">www.uniteapps.dk</a></li>

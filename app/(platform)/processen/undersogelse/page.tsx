@@ -1,29 +1,8 @@
 import { ChevronRight } from "lucide-react";
+import { CodeBlock } from "@/components/code-block";
 
 export default function UndersogelsePage() {
-  return (
-    <div className="max-w-4xl mx-auto space-y-8 p-4 pt-0">
-      <header className="pb-8 border-b border-border">
-        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
-          <span>Processen</span>
-          <ChevronRight className="w-3 h-3" />
-          <span className="text-primary font-medium">1 - Undersøgelse</span>
-        </div>
-        <h1 className="text-4xl font-bold tracking-tight text-foreground mb-6">Fase 1: Undersøgelse</h1>
-        <p className="text-lg text-muted-foreground">Før du bygger, skal du forstå. Brug denne prompt til at afdække din idé.</p>
-      </header>
-
-      <div className="prose prose-lg dark:prose-invert max-w-none">
-
-        <h2 className="text-2xl font-bold">Deep Research Prompt-Architect</h2>
-        <p>
-          Kopier nedenstående prompt ind i din AI (ChatGPT, Claude, etc.) for at starte et interview om din idé.
-          AI'en vil fungere som en arkitekt der hjælper dig med at afdække blinde vinkler.
-        </p>
-
-        <div className="relative">
-          <pre className="p-4 rounded-lg bg-muted overflow-x-auto text-sm">
-            {`# Rolle: Deep Research Prompt-Architect
+  const promptContent = `# Rolle: Deep Research Prompt-Architect
 Du er en ekspert i at designe "Deep Research Prompts" for Vibe-coders og iværksættere. Dit mål er at interviewe brugeren for at forstå deres app-idé til bunds, og derefter generere en perfekt optimeret research-prompt, de kan bruge til at bygge deres produkt.
 
 # Hovedregel (STRENGT)
@@ -83,9 +62,29 @@ Når brugeren har besvaret Q8, skal du samle svarene og præsentere en opsummeri
 >
 > Er dette korrekt forstået? Eller skal jeg justere noget, før jeg skriver selve prompten?"
 
-Vent på brugerens bekræftelse.`}
-          </pre>
+Vent på brugerens bekræftelse.`;
+
+  return (
+    <div className="max-w-4xl mx-auto space-y-8 p-4 pt-0">
+      <header className="pb-8 border-b border-border">
+        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
+          <span>Processen</span>
+          <ChevronRight className="w-3 h-3" />
+          <span className="text-primary font-medium">1 - Undersøgelse</span>
         </div>
+        <h1 className="text-4xl font-bold tracking-tight text-foreground mb-6">Fase 1: Undersøgelse</h1>
+        <p className="text-lg text-muted-foreground">Før du bygger, skal du forstå. Brug denne prompt til at afdække din idé.</p>
+      </header>
+
+      <div className="prose prose-lg dark:prose-invert max-w-none">
+
+        <h2 className="text-2xl font-bold">Deep Research Prompt-Architect</h2>
+        <p>
+          Kopier nedenstående prompt ind i din AI (ChatGPT, Claude, etc.) for at starte et interview om din idé.
+          AI'en vil fungere som en arkitekt der hjælper dig med at afdække blinde vinkler.
+        </p>
+
+        <CodeBlock code={promptContent} language="markdown" filename="deep-research-prompt.md" />
 
       </div>
     </div>

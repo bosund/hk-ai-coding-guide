@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   Sidebar,
@@ -68,18 +67,15 @@ export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader className="border-b border-sidebar-border p-4">
-        <Link href="/" className="flex items-center gap-3 group">
-          <Image
-            src="/hk-danmark-logo-vector.svg"
-            alt="HK Danmark Logo"
-            width={40}
-            height={40}
-            className="transition-transform group-hover:scale-105"
+        <Link href="/" className="flex items-center gap-3">
+          <img
+            alt="HK Logo"
+            className="h-8 w-auto"
+            src="/hklogo.svg"
           />
-          <div className="flex flex-col">
-            <span className="font-semibold text-sm leading-tight">HK's Guide til</span>
-            <span className="font-bold text-base leading-tight text-primary">AI Coding</span>
-          </div>
+          <span className="font-semibold text-lg tracking-tight text-gray-900 dark:text-white border-l pl-3 border-gray-300 dark:border-gray-700 ml-2">
+            AI Coding Guide
+          </span>
         </Link>
       </SidebarHeader>
       <SidebarContent>

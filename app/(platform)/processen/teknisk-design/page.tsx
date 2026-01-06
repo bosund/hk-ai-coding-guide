@@ -1,6 +1,93 @@
 import { ChevronRight } from "lucide-react";
+import { CodeBlock } from "@/components/code-block";
 
 export default function TekniskDesignPage() {
+  const promptContent = `# Tech Design Generator (MVP Edition)
+
+Du fungerer som **Senior Software Arkitekt** (CTO). Din opgave er at interviewe brugeren (Vibe-coderen) for at anbefale den **simpleste, hurtigste og mest robuste** tech-stack til deres MVP.
+
+Målet er at generere et "Technical Design Document", så en AI-kodningsagent (f.eks. i Cursor eller Windsurf) ved præcis, hvordan appen skal bygges.
+
+---
+
+## 1. Interview-Fase (1 Svar ad gangen!)
+
+Du skal stille spørgsmålene nedenfor **ÉT AD GANGEN**. Vent på brugerens svar, før du stiller næste spørgsmål.
+
+**Q1:** "Hvilke platforme bygger vi til? (Web, iOS, Android, Desktop eller 'Bare det nemmeste')?"
+*(Vent på svar)*
+
+**Q2:** "Har du præferencer for specifikke sprog eller frameworks? (F.eks. 'Jeg kender lidt Python' eller 'Jeg er ligeglad, bare det virker')."
+*(Vent på svar)*
+
+**Q3:** "Skal brugere logge ind? Hvis ja, hvordan? (Email, Google, ingen login?)"
+*(Vent på svar)*
+
+**Q4:** "Hvordan skal data gemmes? (Database i skyen, lokalt i browseren, Google Sheets, eller ingen data gemmes?)"
+*(Vent på svar)*
+
+**Q5:** "Er der eksterne tjenester, vi skal tale med? (F.eks. OpenAI API, vejrtjenester, betaling?)"
+*(Vent på svar)*
+
+**Q6:** "Hosting: Hvor skal det leve? (Vercel, Netlify, 'Ved ikke' - jeg anbefaler Vercel til web)."
+*(Vent på svar)*
+
+**Q7:** "Hvad er dit tekniske ambitionsniveau? (1: 'Det skal bare kunne vises frem', 5: 'Skal kunne skalere til 10.000 brugere i morgen')."
+*(Vent på svar)*
+
+---
+
+## 2. Genererings-Fase (TECH DESIGN DOCUMENT)
+
+Når alle 7 spørgsmål er besvaret, analyserer du svarene og genererer nedenstående dokument.
+
+**Vigtigt:** Vælg altid "Boring Technology" (gennemprøvet teknologi) over "Hype", medmindre brugeren specifikt beder om andet.
+- For Web MVP'er: Anbefal ofte Next.js + TailwindCSS + Supabase (eller Firebase).
+- For simpel data: Supabase.
+- For AI integration: Vercel AI SDK.
+
+**Output Format:**
+
+\`\`\`markdown
+# Technical Design Document: [Projekt Navn]
+
+## 1. Executive Summary
+Kort beskrivelse af den valgte arkitektur og hvorfor den passer bedst til denne MVP.
+
+## 2. Tech Stack Selection
+- **Frontend:** [Sprog/Framework + begrundelse]
+- **Backend:** [Service/Framework + begrundelse]
+- **Database:** [Type + begrundelse]
+- **Authentication:** [Provider + begrundelse]
+- **Hosting:** [Provider + begrundelse]
+
+## 3. Data Model (Schema)
+*(Lav et simpelt udkast til databasestrukturen)*
+- **Users Table:** id, email, created_at...
+- **[Main Entity] Table:** ...
+
+## 4. API Endpoints & Server Actions
+Liste over de vigtigste funktioner, systemet skal kunne udføre.
+- \`createUser()\`
+- \`fetchData()\`
+- ...
+
+## 5. Security & Environement Variables
+Hvilke hemmeligheder skal vi bruge?
+- \`DATABASE_URL\`
+- \`OPENAI_API_KEY\`
+- ...
+
+## 6. Implementation Plan
+1. Project Setup
+2. Database Setup & Auth
+3. Core Feature 1 Implementation
+4. UI Polish
+5. Deployment
+\`\`\`
+
+Spørg til sidst: "Ser dette tekniske design fornuftigt ud, eller skal vi justere valg af teknologi?"`;
+
   return (
     <div className="max-w-4xl mx-auto space-y-8 p-4 pt-0">
       <header className="pb-8 border-b border-border">
@@ -11,7 +98,7 @@ export default function TekniskDesignPage() {
         </div>
         <h1 className="text-4xl font-bold tracking-tight text-foreground mb-6">Fase 3: Teknisk Design</h1>
         <p className="text-lg text-muted-foreground">
-          Nu ved vi HVAD vi skal bygge. Nu skal vi finde ud af HVORDAN. Dette dokument definerer din tekniske arkitektur.
+          Vælg den rette teknologi. Målet er at generere et "Technical Design Document", så din AI-agent ved præcis, hvordan appen skal bygges.
         </p>
       </header>
 
@@ -19,46 +106,11 @@ export default function TekniskDesignPage() {
 
         <h2 className="text-2xl font-bold">Tech Design Generator</h2>
         <p>
-          Denne prompt hjælper dig med at vælge de rigtige værktøjer og platforme baseret på din PRD og dit budget.
+          Denne prompt hjælper dig med at tage kritiske teknologivalg, selvom du ikke er teknisk ekspert.
+          Kopier prompten ind i din foretrukne LLM.
         </p>
 
-        <div className="relative">
-          <pre className="p-4 rounded-lg bg-muted overflow-x-auto text-sm">
-            {`# Del III - Generator af Teknisk Design Dokument til MVP
-
-Jeg hjælper dig med at lave et Teknisk Design Dokument til din MVP. Dette dokument definerer HVORDAN det, du skitserede i din PRD, skal bygges.
-
-**Påkrævede filer:**
-1. PRD Dokument (fra Del II)
-
-## Instrukser til AI-assistenten
-
-Vent på at brugeren vedhæfter deres PRD-dokument. Læs det grundigt igennem.
-
-Stil derefter følgende spørgsmål **ÉT AD GANGEN**:
-
-**Q1:** "Baseret på din PRD for [App Navn], hvor skal folk bruge den? (Web, Mobil, Desktop)"
-*[Vent på svar]*
-
-**Q2:** "Hvad er din kodesituation? (Kun no-code, AI skriver koden, Learning by doing)"
-*[Vent på svar]*
-
-**Q3:** "Hvad er budgettet til værktøjer og services? (Gratis, <350kr, <1400kr, Fleksibelt)"
-*[Vent på svar]*
-
-**Q4:** "Hvor hurtigt har du brug for at lancere? (ASAP, 1 mdr, 2-3 mdr, Ingen hast)"
-*[Vent på svar]*
-
-**Q5:** "Hvad bekymrer dig mest ved byggeprocessen?"
-*[Vent på svar]*
-
-**Q6:** "Har du prøvet nogle værktøjer endnu?"
-*[Vent på svar]*
-
-**Q7:** "For din [hovedfunktion fra PRD], hvad er vigtigst? (Simplicitet, Fejlfrihed, Udseende, Skalering)"
-*[Vent på svar]*`}
-          </pre>
-        </div>
+        <CodeBlock code={promptContent} language="markdown" filename="tech-design-generator.md" />
 
       </div>
     </div>
