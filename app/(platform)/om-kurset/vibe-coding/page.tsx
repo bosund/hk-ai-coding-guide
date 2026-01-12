@@ -83,7 +83,7 @@ export default function VibeCodingPage() {
                 <h2 className="text-3xl font-bold mt-12 mb-6">Sådan bliver du klogere</h2>
                 <p>Søg på nettet med google og læs om Vibe-coding, se Youtube videoer.</p>
                 <ul>
-                    <li><a href="https://github.com/EnzeD/vibe-coding">Ultimate Guide to Vibe Coding</a></li>
+                    <li><a href="https://github.com/EnzeD/vibe-coding">Ultimate: Guide to Vibe Coding</a></li>
                 </ul>
 
                 <p>Går du i stå, så brug din AI agent, spørg den eks. om:</p>
